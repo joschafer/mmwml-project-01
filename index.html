@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <!-- Load the latest version of TensorFlow.js and required models -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet@2.0.2"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+    <div id="console"></div>
+    <!-- Setup video stream (which will display and be used for classification) -->
+    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+
+    <!-- Buttons are used to label video stream at a point in time (frame) -->
+    <button id="class-a">Add A</button>
+    <button id="class-b">Add B</button>
+    <button id="class-c">Add C</button>
+
+    <!-- Load index.js after the content of the page.  This is the brains of the ML process  -->
+    <script src="index.js"></script>
+  </body>
+</html>
